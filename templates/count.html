@@ -1,1 +1,12 @@
 <h1>Count</h1>
+
+<a href="{% url 'homepage' %}">Go back</a>
+
+<h1>Input:</h1>
+{{ fulltext }}
+
+<h1>Occurences:</h1>
+
+{% for word, count in sorted_tuple %}
+    <p>{{ word }}: {{ count }}</p>
+{% endfor %}
